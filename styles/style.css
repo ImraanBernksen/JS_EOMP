@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
 *,
 *::before,
 *::after {
@@ -6,9 +8,13 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Zen Dots', cursive;
+}
+
 #socials {
     text-decoration: none;
-    padding: 7px
+    padding: 6px
 }
 
 @media screen and (min-width:300px) {
