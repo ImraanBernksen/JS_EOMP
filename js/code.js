@@ -85,7 +85,7 @@ function displayProducts(){
             <td>${products[item].id}</td>
             <td>${products[item].productName}</td>
             <td>${products[item].productDescription}</td>
-            <td>R${products[item].productPrice}</td>
+            <td>R++${products[item].productPrice}</td>
             </tr>
             `
         }
