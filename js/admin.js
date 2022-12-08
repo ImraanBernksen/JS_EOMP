@@ -125,57 +125,57 @@ function displayProducts(){
 
 displayProducts()
 
-var tableBody =  document.querySelector('#tbody_')
+// var tableBody =  document.querySelector('#tbody_')
 
-var row = null;
-function submitProduct() {
-  var data = getData();
-  var readData = readingDataFLS(data);
-  if (data == false) {
-} else {
-    if (row == null) {
-     insert(readData);
-    } else {
-     updateProducts();
-    }
-  }
-}
-function getData() {
-  var name = document.getElementById("name").value;
-  var description = document.getElementById("description").value;
-  var quantity = document.getElementById("quantity").value;
-  var price = document.getElementById("price").value;
-  var list = [name, description, quantity , price];
-  if (list.includes("")) {
-      return false;
-  } else {
-    return list;
-  }
-}
-function insert(readData) {
- var row = tableBody.insertRow();
- row.insertCell(0).innerHTML = readData[0];
- row.insertCell(1).innerHTML = readData[1];
- row.insertCell(2).innerHTML = readData[2];
- row.insertCell(3).innerHTML = readData[3];
- row.insertCell(4).innerHTML = `<button onclick = editProducts(this)>Edit</button><button onclick = removeProducts(this)>Delete</button>`;
-}
-function editProducts(info) {
- row = info.parentElement.parentElement;
- document.getElementById("name").value = row.cells[0].innerHTML;
- document.getElementById("description").value = row.cells[1].innerHTML;
- document.getElementById("quantity").value = row.cells[2].innerHTML;
- document.getElementById("price").value = row.cells[3].innerHTML;
-}
-function updateProducts() {
- row.cells[0].innerHTML = document.getElementById("name").value;
- row.cells[1].innerHTML = document.getElementById("description").value;
- row.cells[2].innerHTML = document.getElementById("quantity").value;
- row.cells[3].innerHTML = document.getElementById("price").value;
- row = null;
-}
-function removeProducts(info) {
- row = info.parentElement.parentElement;
- document.getElementById("tbody_").deleteRow(row.rowIndex);
-}
+// var row = null;
+// function submitProduct() {
+//   var data = getData();
+//   var readData = readingDataFLS(data);
+//   if (data == false) {
+// } else {
+//     if (row == null) {
+//      insert(readData);
+//     } else {
+//      updateProducts();
+//     }
+//   }
+// }
+// function getData() {
+//   var name = document.getElementById("name").value;
+//   var description = document.getElementById("description").value;
+//   var quantity = document.getElementById("quantity").value;
+//   var price = document.getElementById("price").value;
+//   var list = [name, description, quantity , price];
+//   if (list.includes("")) {
+//       return false;
+//   } else {
+//     return list;
+//   }
+// }
+// function insert(readData) {
+//  var row = tableBody.insertRow();
+//  row.insertCell(0).innerHTML = readData[0];
+//  row.insertCell(1).innerHTML = readData[1];
+//  row.insertCell(2).innerHTML = readData[2];
+//  row.insertCell(3).innerHTML = readData[3];
+//  row.insertCell(4).innerHTML = `<button onclick ="editProducts(this)">Edit</button><button onclick ="removeProducts"(this)>Delete</button>`;
+// }
+// function editProducts(info) {
+//  row = info.parentElement.parentElement;
+//  document.getElementById("name").value = row.cells[0].innerHTML;
+//  document.getElementById("description").value = row.cells[1].innerHTML;
+//  document.getElementById("quantity").value = row.cells[2].innerHTML;
+//  document.getElementById("price").value = row.cells[3].innerHTML;
+// }
+// function updateProducts() {
+//  row.cells[0].innerHTML = document.getElementById("name").value;
+//  row.cells[1].innerHTML = document.getElementById("description").value;
+//  row.cells[2].innerHTML = document.getElementById("quantity").value;
+//  row.cells[3].innerHTML = document.getElementById("price").value;
+//  row = null;
+// }
+// function removeProducts(info) {
+//  row = info.parentElement.parentElement;
+//  document.getElementById("tbody_").deleteRow(row.rowIndex);
+// }
 
