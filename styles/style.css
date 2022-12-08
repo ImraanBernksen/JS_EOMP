@@ -50,3 +50,24 @@ body {
     width: 100%;
     }
 }
+
+.waviy {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: 100px;
+    color: black;
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
