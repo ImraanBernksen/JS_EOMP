@@ -46,13 +46,24 @@
               <th>Description</th>
               <th>Quantity</th>
               <th>Price</th>
-              <th>Edit/Delect</th>
+              <th>Edit/Delete</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="tbody_">
 
           </tbody>
         </table>
+      <div class="text-center" id="crud">
+      <h2 class="text-center">CRUD System</h2>
+      <form id="form">
+      <input type="text" id="name" name="name" placeholder="Product Name">
+      <input type="text" id="description" name="description" placeholder="Description">
+      <input type="number" id="quantity" name="quantity" placeholder="Quantity">
+      <input type="number" id="price" name="price" placeholder="Price">
+      <input type="button" value="Submit" id="btn"onclick="submitProduct()">
+      <input type="reset" value="Reset">
+      </form>
+    </div>
     </main>
     <footer id="copyright" class="lead">
       <p>Copyright &copy; 2022</p>

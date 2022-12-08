@@ -21,10 +21,19 @@ body {
     background-attachment: fixed;
 }
 
+#crud {
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
 #slogan {
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
+}
+
+#tick {
+    text-decoration: ;
 }
 
 #socials {
