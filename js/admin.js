@@ -117,13 +117,12 @@ function displayProducts(){
             <td>${item.productDescription}</td>
             <td>${item.productQuantity}</td>
             <td>R${item.productPrice}</td>
-            <td><button type="button" class="bg-dark text-white" onclick="editProducts">Edit</button> <button type="button" class="bg-dark text-white" onclick="removeProduct">Delete</button></td>
+            <td><button type="button" class="bg-dark text-white" onclick="editProduct">Edit</button> <button type="button" class="bg-dark text-white" onclick="removeProduct">Delete</button></td>
             </tr>
             `
     })
 }
 
 displayProducts()
-
 
 
