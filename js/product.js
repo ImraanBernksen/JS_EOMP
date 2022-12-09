@@ -115,7 +115,7 @@ function displayProducts(){
             <div class="card col-4">
             <img src="${item.productImage}" class="card-img-top">
             <div class="card-body">
-            <h5 class="card-title">${item.productName} - ${item.productDescription}</h5>
+            <h5 class="card-title text-center">${item.productName}</h5>
             <p class="card-text text-center">R${item.productPrice} <a href="../html/checkout.html" class="bg-dark text-white" id="tick">Checkout</a></p>
             </div>
             </div>

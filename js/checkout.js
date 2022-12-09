@@ -117,9 +117,27 @@ function displayProducts(){
             <td><img id="photo" src="${item.productImage}"</td>
             <td>${item.productName}</td>
             <td>${item.productDescription}</td>
-            <td><input type="number" name="quantity" placeholder="Quantity"></input></td>
-            <td><input type="number" name="price" placeholder="Price"></input></td>
+            <td>R${item.productPrice}</td>
+            <td>
+                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal-${item.id}">BUY</button
+            </td>
             </tr>
+            <div class="modal fade" id="exampleModal-${item.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Purchase</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body"><input type="number" id="quantity" name="quantity" placeholder="Quantity">
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-dark">Submit</button>
+            </div>
+            </div>
+            </div>
+            </div>
             `
         }
     })
