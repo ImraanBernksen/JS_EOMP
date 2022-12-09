@@ -17,6 +17,10 @@ body {
     font-family: 'Zen Dots', cursive;
 }
 
+#buynow:hover {
+    background-color: lime;
+}
+
 #homepage {
     background-attachment: fixed;
 }

@@ -130,10 +130,10 @@ function displayProducts(){
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">Quantity <input type="number" id="quantity" name="quantity" placeholder="Quantity">
-            </div><br>Amount : R1000
+            </div><br>Amount : R${item.productPrice}
             <div class="modal-footer">
             <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-dark">BUY</button>
+            <button type="button" class="btn btn-dark" id="buynow">BUY</button>
             </div>
             </div>
             </div>
