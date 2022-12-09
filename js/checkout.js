@@ -129,11 +129,11 @@ function displayProducts(){
             <h1 class="modal-title fs-5" id="exampleModalLabel">Purchase</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body"><input type="number" id="quantity" name="quantity" placeholder="Quantity">
+            <div class="modal-body">Quantity <input type="number" id="quantity" name="quantity" placeholder="Quantity">
             </div>
             <div class="modal-footer">
             <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-dark">Submit</button>
+            <button type="button" class="btn btn-dark">BUY</button>
             </div>
             </div>
             </div>
