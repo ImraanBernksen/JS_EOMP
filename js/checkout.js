@@ -129,11 +129,12 @@ function displayProducts(){
             <h1 class="modal-title fs-5" id="exampleModalLabel">Purchase</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">Quantity <input type="number" id="quantity" name="quantity" placeholder="Quantity">
+            <div class="modal-body">Quantity <input type="range" value="1" min="1" max="${item.productQuantity}" oninput="this.nextElementSibling.value = this.value">
+            <output>1</output>
             </div><br>Amount : R${item.productPrice}
             <div class="modal-footer">
             <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-dark" id="buynow">BUY</button>
+            <button type="button" class="btn btn-dark" id="buynow" onclick="buyAlert()">BUY</button>
             </div>
             </div>
             </div>
@@ -146,3 +147,52 @@ function displayProducts(){
 displayProducts()
 
 localStorage.setItem('products', JSON.stringify(products));
+
+/*Alert*/
+function buyAlert() {
+    alert("Thank you for shopping");
+  }
+
+/* Sorting Products */
+function sortProduct() {
+    var table, rows, switching, i, x, y, shouldSwitch;
+    table = document.getElementById("table_checkout");
+    switching = true;
+    while (switching) {
+      switching = false;
+      rows = table.rows;
+      for (i = 1; i < (rows.length - 1); i++) {
+        shouldSwitch = false;
+        x = rows[i].getElementsByTagName("TD")[2];
+        y = rows[i + 1].getElementsByTagName("TD")[2];
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          shouldSwitch = true;
+          break;
+        }
+      }
+      if (shouldSwitch) {
+        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+        switching = true;
+      }
+    }
+}
+
+/* Filtering Search */
+function searchProduct() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("table_checkout");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[2];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }       
+    }
+}

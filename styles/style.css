@@ -17,10 +17,6 @@ body {
     font-family: 'Zen Dots', cursive;
 }
 
-#buynow:hover {
-    background-color: lime;
-}
-
 #homepage {
     background-attachment: fixed;
 }
@@ -42,6 +38,10 @@ body {
 
 #crud {
     padding-bottom: 100px;
+}
+
+#sort_filter {
+    display: inline-flex;
 }
 
 #tick, #email {
